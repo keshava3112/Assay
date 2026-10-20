@@ -1,0 +1,46 @@
+# The demo Set. Every company, person, investor and publisher in the demo is fictional.
+id: india-lending-series-a
+name: Indian lending fintechs with a recent Series A
+description: Startups headquartered in India that offer loans or credit and raised a Series A in the last 18 months.
+entity: company
+query: Indian fintech startups offering loans or credit lines, Series A funding
+backends: [corpus]
+lead_sources: [fintechpulse.example]
+limit: 20
+pages_per_candidate: 4
+monitor: {every: 1d}
+criteria:
+  - id: india
+    label: HQ in India
+    question: Is the company headquartered in India?
+    signals: ['headquartered in (Bengaluru|Bangalore|Mumbai|Pune|Hyderabad|Jaipur|Delhi|New Delhi|Kochi|Ahmedabad|Chennai|Gurugram|Noida|India)\b']
+    against: ['headquartered in (Singapore|London|Dubai|San Francisco|New York)']
+  - id: credit
+    label: Offers credit
+    question: Does the company offer loans, credit lines or financing to customers?
+    signals: ['\b(loans?|lending|credit lines?|working[- ]capital|buy now,? pay later|BNPL|(invoice|equipment) financing)\b']
+    against: ["\\b(does not|do not|doesn't|don't) (offer|provide) (loans|credit|lending)"]
+  - id: series_a
+    label: Series A in 18 months
+    question: Did the company raise a Series A in the last 18 months?
+    signals: ['\bSeries A\b']
+    within_months: 18
+    against: ['\b(bootstrapped|has not raised|no outside (funding|capital))\b']
+  - id: security
+    label: SOC 2 / ISO 27001
+    question: Does the company hold SOC 2 or ISO 27001 certification?
+    required: false
+    signals: ['\b(SOC ?2|ISO ?27001)\b']
+enrich:
+  - id: hq
+    label: HQ
+    question: Which city is the company headquartered in?
+    pattern: 'headquartered in ((?:New )?[A-Z][a-z]+)'
+  - id: raised
+    label: Series A size
+    question: How much did the company raise in its Series A?
+    pattern: 'rais\w* (?:a |an |its )?((?:\$|₹)[\d,.]+ ?(?:M|million|crore)?)'
+  - id: founded
+    label: Founded
+    question: When was the company founded?
+    pattern: '[Ff]ounded in (20\d\d)'

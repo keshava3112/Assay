@@ -1,0 +1,40 @@
+[project]
+name = "assay-lists"
+version = "0.1.0"
+description = "Lists you can prove. Open-source, self-hosted verified lists and monitors: every check carries a verbatim quote and its source."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+keywords = ["websets", "lead-generation", "sourcing", "web-research", "llm", "agents", "monitoring", "exa-alternative"]
+dependencies = [
+  "httpx>=0.27",
+  "starlette>=0.37",
+  "uvicorn>=0.30",
+  "pyyaml>=6.0",
+  "anthropic>=0.40",
+  "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+mcp = ["mcp>=2.0"]
+dev = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/keshava3112/Assay"
+Demo = "https://keshava3112.github.io/Assay/"
+
+[project.scripts]
+assay = "assay.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["assay*"]
+
+[tool.setuptools.package-data]
+assay = ["web/static/*", "examples/demo/*.yaml", "examples/demo/*/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

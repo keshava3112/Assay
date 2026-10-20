@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Assay">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F1D894"/>
+      <stop offset=".45" stop-color="#C9A24E"/>
+      <stop offset="1" stop-color="#8C6B2A"/>
+    </linearGradient>
+  </defs>
+  <!-- the hallmark cartouche: a punch shape with clipped corners -->
+  <path d="M14 4h36l10 10v36L50 60H14L4 50V14z" fill="url(#g)"/>
+  <path d="M15.5 8h33L56 15.5v33L48.5 56h-33L8 48.5v-33z" fill="none" stroke="#171B1A" stroke-opacity=".55" stroke-width="1.5"/>
+  <!-- an engraved A, its crossbar a touchstone streak -->
+  <path d="M32 15 19.5 48h6.2l2.6-7.4h7.4l2.6 7.4h6.2L32 15zm0 11.2 2.3 7.3h-4.6z" fill="#171B1A"/>
+  <path d="M22 38.6c6-1.6 14-1.6 20 0" stroke="#171B1A" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+</svg>

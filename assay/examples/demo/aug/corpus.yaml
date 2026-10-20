@@ -1,0 +1,24 @@
+captured: '2026-08-18T09:00:00'
+pages:
+  https://kosha.example: kosha_example.html
+  https://kosha.example/about: kosha_example__about.html
+  https://kosha.example/press: kosha_example__press.html
+  https://kosha.example/security: kosha_example__security.html
+  https://paisaloom.example: paisaloom_example.html
+  https://paisaloom.example/press: paisaloom_example__press.html
+  https://paisaloom.example/security: paisaloom_example__security.html
+  https://udhaargrid.example: udhaargrid_example.html
+  https://udhaargrid.example/about: udhaargrid_example__about.html
+  https://ledgerline.example: ledgerline_example.html
+  https://ledgerline.example/press: ledgerline_example__press.html
+  https://tijoripay.example: tijoripay_example.html
+  https://tijoripay.example/press: tijoripay_example__press.html
+  https://saralloans.example: saralloans_example.html
+  https://saralloans.example/about: saralloans_example__about.html
+  https://saralloans.example/security: saralloans_example__security.html
+  https://anvilfinance.example: anvilfinance_example.html
+  https://mitramoney.example: mitramoney_example.html
+  https://mitramoney.example/press: mitramoney_example__press.html
+  https://gullak.example: gullak_example.html
+  https://chaiandcode.example/credit-scoring-notes: chaiandcode_example__credit-scoring-notes.html
+  https://fintechpulse.example/lending-startups-to-watch: fintechpulse_example__lending-startups-to-watch.html

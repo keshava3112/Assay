@@ -1,0 +1,22 @@
+name: Bug report
+description: Something in Assay didn't behave the way the docs say it should.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you ran, what you expected, and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: spec
+    attributes:
+      label: Set spec
+      description: The YAML for the set, if relevant. Remove anything private.
+      render: yaml
+  - type: input
+    id: version
+    attributes:
+      label: Version and Python
+      placeholder: assay-lists 0.1.0, Python 3.12
