@@ -142,7 +142,7 @@ Ports and adapters. The domain (`domain.py`, `gate.py`, `monitor.py`) is pure an
 - **Fetcher** (`adapters/fetch.py`): honours robots.txt, serialises requests per host with a minimum interval, retries 429 and 5xx with backoff, and accepts HTML only up to 2 MB. Pages go into a content-addressed disk cache with atomic writes; stale entries are revalidated with `If-None-Match` and `If-Modified-Since`.
 - **Monitor** (`monitor.py`): M1 new and lost matches, M2 verdict flips, M3 field changes, M4 new rows are announced only if they match, M5 runs of a different question (a changed spec fingerprint) are never compared.
 - **Store** (`store.py`): SQLite in WAL mode. Runs are JSON documents, and events go in an append-only table so a late SSE subscriber gets the full history and then the live tail.
-- **API** (`api.py`): Starlette. A run starts in the background (`202`), a second run of the same set is refused (`409`), and `/api/runs/{id}/events` streams server-sent events.
+- **API** (`api.py`): Starlette. A run starts in the background (`202`), a second run of the same set is refused (`409`), and `/api/runs/{id}/events` streams server-sent events. Full reference: [docs/API.md](docs/API.md).
 - **Static site** (`site.py`): `assay site` bakes runs and their event streams into the same front end. That's how the demo runs on GitHub Pages with no server.
 
 ## Use it from an agent
