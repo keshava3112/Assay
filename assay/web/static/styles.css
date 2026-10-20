@@ -1,6 +1,7 @@
 /* Assay: the touchstone and the hallmark.
    Slate is the stone gold is tested on; gold is reserved for what has been proven. */
 :root {
+  color-scheme: dark;
   --stone-950: #121615;
   --stone-900: #171b1a;
   --stone-850: #1b201f;
